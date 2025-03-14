@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vũ Tuấn Nghĩa - Tư vấn/Coaching</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1dbf73;  /* Fiverr's green color */
+            --text-color: #404145;
+            --light-gray: #74767e;
+            --border-color: #e4e5e7;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            background-color: white;
+            padding: 32px 0;
+            border-bottom: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin: 0 0 16px 0;
+        }
+
+        header p {
+            color: var(--light-gray);
+            margin: 8px 0;
+        }
+
+        header a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .services {
+            padding: 40px 0;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            padding: 24px 0;
+        }
+
+        .service-package {
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 24px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+
+        .service-package:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .service-package h3 {
+            font-size: 20px;
+            margin: 0 0 16px 0;
+            color: var(--text-color);
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-color);
+            margin: 16px 0;
+        }
+
+        .duration {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .description {
+            color: var(--light-gray);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .description i {
+            color: var(--primary-color);
+            margin-right: 8px;
+            width: 16px;
+        }
+
+        .description .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .description .feature-text {
+            flex: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            color: var(--light-gray);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .slogan {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 16px 0;
+        }
+
+        .zalo-corner {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.2s;
+            gap: 8px;
+            background: white;
+            padding: 4px 12px 4px 4px;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .zalo-corner:hover {
+            transform: scale(1.05);
+        }
+
+        .zalo-corner img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+
+        .zalo-corner span {
+            color: var(--text-color);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+            
+            header {
+                padding: 24px 0;
+            }
+            
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .slogan {
+                font-size: 18px;
+                padding: 0 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Gầm bàn dev</h1>
+            <div class="slogan">Coaching phỏng vấn chuyên sâu, nâng cao kiến thức vững vàng</div>
+            <p>Zalo: 037.383.3970 | <a href="mailto:tuannghia1702@gmail.com">tuannghia1702@gmail.com</a></p>
+            <p>Với hơn 10 năm kinh nghiệm IT chuyên sâu, từ Backend đến Data engineer, trải qua các vị trí từ software engineer tại công ty outsourcing nhỏ (NTQ Solution), product nhỏ (Septeni), senior software engineer tại công ty tech global (Agoda) đến Lead data engineer, Data engineer manager (Techcombank), tôi có kinh nghiệm đa dạng cả trong phỏng vấn và mentor. Dựa vào kiến thức và nền tảng hiện tại của bạn, tôi sẽ giúp bạn cải thiện nhanh chóng để đạt được mục tiêu một cách hiệu quả nhất.</p>
+        </div>
+    </header>
+
+    <section class="services">
+        <div class="container">
+            <div class="service-grid">
+                <div class="service-package">
+                    <a href="https://zalo.me/0373833970" class="zalo-corner" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Icon_of_Zalo.svg/1200px-Icon_of_Zalo.svg.png" alt="Zalo">
+                        <span>037.383.3970</span>
+                    </a>
+                    <h3>Gói Cơ Bản</h3>
+                    <div class="duration">3 ngày tư vấn online</div>
+                    <div class="price">699k VND</div>
+                    <div class="description">
+                        <div class="feature-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span class="feature-text">30 phút call tư vấn</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-message"></i>
+                            <span class="feature-text">Tư vấn trong 3 ngày qua Zalo</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span class="feature-text">Dựa vào nền tảng hiện tại của bạn, tập trung cải thiện các điểm còn yếu</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-package">
+                    <a href="https://zalo.me/0373833970" class="zalo-corner" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Icon_of_Zalo.svg/1200px-Icon_of_Zalo.svg.png" alt="Zalo">
+                        <span>037.383.3970</span>
+                    </a>
+                    <h3>Gói Nâng Cao</h3>
+                    <div class="duration">7 ngày tư vấn online</div>
+                    <div class="price">999k VND</div>
+                    <div class="description">
+                        <div class="feature-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span class="feature-text">1 tiếng call tư vấn</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-message"></i>
+                            <span class="feature-text">Tư vấn trong 7 ngày qua Zalo</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span class="feature-text">Dựa vào nền tảng hiện tại của bạn, tập trung cải thiện các điểm còn yếu</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-road"></i>
+                            <span class="feature-text">Tư vấn career path, định hướng nghề nghiệp</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <span class="feature-text">Hướng dẫn kỹ năng phỏng vấn</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-package">
+                    <a href="https://zalo.me/0373833970" class="zalo-corner" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Icon_of_Zalo.svg/1200px-Icon_of_Zalo.svg.png" alt="Zalo">
+                        <span>037.383.3970</span>
+                    </a>
+                    <h3>Gói Chuyên Sâu</h3>
+                    <div class="duration">21 ngày tư vấn online</div>
+                    <div class="price">2,666k VND</div>
+                    <div class="description">
+                        <div class="feature-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span class="feature-text">3 tiếng tư vấn call</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-message"></i>
+                            <span class="feature-text">Tư vấn trong 21 ngày qua Zalo</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span class="feature-text">Dựa vào nền tảng hiện tại của bạn, tập trung cải thiện các điểm còn yếu</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-road"></i>
+                            <span class="feature-text">Tư vấn career path, định hướng nghề nghiệp</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-star"></i>
+                            <span class="feature-text">Coaching hoàn chỉnh interview process hoặc dự án trong công ty</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Gầm bàn dev. All rights reserved.</p>
+    </footer>
+</body>
+</html>
