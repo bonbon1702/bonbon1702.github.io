@@ -3,292 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gầm bàn dev - Tư vấn/Coaching</title>
+    <title>Gầm bàn dev - Maintenance</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        :root {
-            --primary-color: #1dbf73;  /* Fiverr's green color */
-            --text-color: #404145;
-            --light-gray: #74767e;
-            --border-color: #e4e5e7;
-        }
-
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: var(--text-color);
-            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8f9fa;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        header {
-            background-color: white;
-            padding: 32px 0;
-            border-bottom: 1px solid var(--border-color);
+        .maintenance-container {
             text-align: center;
+            padding: 40px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: 20px;
         }
 
-        header h1 {
-            font-size: 32px;
-            margin: 0 0 16px 0;
+        .maintenance-icon {
+            font-size: 64px;
+            color: #1dbf73;
+            margin-bottom: 24px;
         }
 
-        header p {
-            color: var(--light-gray);
-            margin: 8px 0;
+        .maintenance-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #404145;
+            margin-bottom: 16px;
         }
 
-        header a {
-            color: var(--primary-color);
+        .maintenance-text {
+            color: #74767e;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .contact {
+            font-size: 14px;
+            color: #74767e;
+        }
+
+        .contact a {
+            color: #1dbf73;
             text-decoration: none;
         }
 
-        .services {
-            padding: 40px 0;
-        }
-
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-            padding: 24px 0;
-        }
-
-        .service-package {
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            padding: 24px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            position: relative;
-        }
-
-        .service-package:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        .service-package h3 {
-            font-size: 20px;
-            margin: 0 0 16px 0;
-            color: var(--text-color);
-        }
-
-        .price {
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--text-color);
-            margin: 16px 0;
-        }
-
-        .duration {
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .description {
-            color: var(--light-gray);
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        .description i {
-            color: var(--primary-color);
-            margin-right: 8px;
-            width: 16px;
-        }
-
-        .description .feature-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 8px;
-        }
-
-        .description .feature-text {
-            flex: 1;
-        }
-
-        footer {
-            text-align: center;
-            padding: 24px;
-            color: var(--light-gray);
-            border-top: 1px solid var(--border-color);
-        }
-
-        .slogan {
-            font-size: 20px;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin: 16px 0;
-        }
-
-        .telegram-section {
-            text-align: center;
-            padding: 40px 0;
-            background: white;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .telegram-container {
-            display: inline-flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 24px;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .telegram-container img {
-            width: 200px;
-            height: 200px;
-            object-fit: contain;
-            margin-bottom: 16px;
-        }
-
-        .telegram-text {
-            color: var(--text-color);
-            font-size: 16px;
-            font-weight: 500;
-            margin-top: 12px;
-        }
-
-        .telegram-corner {
-            display: none;
-        }
-
-        .zalo-corner {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 16px;
-            }
-            
-            header {
-                padding: 24px 0;
-            }
-            
-            .service-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .slogan {
-                font-size: 18px;
-                padding: 0 16px;
-            }
+        .contact a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Gầm bàn dev</h1>
-            <div class="slogan">Coaching phỏng vấn chuyên sâu, nâng cao kiến thức vững vàng</div>
-            <p>Với hơn 10 năm kinh nghiệm IT chuyên sâu, từ Backend đến Data engineer, trải qua các vị trí từ software engineer tại công ty outsourcing nhỏ (NTQ Solution), product nhỏ (Septeni), senior software engineer tại công ty tech global (Agoda) đến Lead data engineer, Data engineer manager (Techcombank), tôi có kinh nghiệm đa dạng cả trong phỏng vấn và mentor. Dựa vào kiến thức và nền tảng hiện tại của bạn, tôi sẽ giúp bạn cải thiện nhanh chóng để đạt được mục tiêu một cách hiệu quả nhất.</p>
+    <div class="maintenance-container">
+        <div class="maintenance-icon">
+            <i class="fa-solid fa-wrench"></i>
         </div>
-    </header>
-
-    <section class="telegram-section">
-        <div class="container">
-            <div class="telegram-container">
-                <img src="qrcode.png" alt="Telegram QR Code - NGHIA">
-                <div class="telegram-text">Quét mã QR để kết nối Telegram</div>
-            </div>
+        <div class="maintenance-title">Đang bảo trì</div>
+        <div class="maintenance-text">
+            Hệ thống đang được nâng cấp để phục vụ bạn tốt hơn.<br>
+            Vui lòng quay lại sau.
         </div>
-    </section>
-
-    <section class="services">
-        <div class="container">
-            <div class="service-grid">
-                <div class="service-package">
-                    <h3>Gói Cơ Bản</h3>
-                    <div class="duration">3 ngày tư vấn online</div>
-                    <div class="price">699k VND</div>
-                    <div class="description">
-                        <div class="feature-item">
-                            <i class="fa-solid fa-phone"></i>
-                            <span class="feature-text">30 phút call tư vấn</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fa-solid fa-message"></i>
-                            <span class="feature-text">Tư vấn trong 3 ngày qua Zalo</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fa-solid fa-chart-line"></i>
-                            <span class="feature-text">Dựa vào nền tảng hiện tại của bạn, tập trung cải thiện các điểm còn yếu</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-package">
-                    <h3>Gói Nâng Cao</h3>
-                    <div class="duration">7 ngày tư vấn online</div>
-                    <div class="price">999k VND</div>
-                    <div class="description">
-                        <div class="feature-item">
-                            <i class="fa-solid fa-phone"></i>
-                            <span class="feature-text">1 tiếng call tư vấn</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fa-solid fa-message"></i>
-                            <span class="feature-text">Tư vấn trong 7 ngày qua Zalo</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fa-solid fa-chart-line"></i>
-                            <span class="feature-text">Dựa vào nền tảng hiện tại của bạn, tập trung cải thiện các điểm còn yếu</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fa-solid fa-road"></i>
-                            <span class="feature-text">Tư vấn career path, định hướng nghề nghiệp</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fa-solid fa-user-tie"></i>
-                            <span class="feature-text">Hướng dẫn kỹ năng phỏng vấn</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-package">
-                    <h3>Gói Chuyên Sâu</h3>
-                    <div class="duration">21 ngày tư vấn online</div>
-                    <div class="price">2,666k VND</div>
-                    <div class="description">
-                        <div class="feature-item">
-                            <i class="fa-solid fa-phone"></i>
-                            <span class="feature-text">3 tiếng tư vấn call</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fa-solid fa-message"></i>
-                            <span class="feature-text">Tư vấn trong 21 ngày qua Zalo</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fa-solid fa-chart-line"></i>
-                            <span class="feature-text">Dựa vào nền tảng hiện tại của bạn, tập trung cải thiện các điểm còn yếu</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fa-solid fa-road"></i>
-                            <span class="feature-text">Tư vấn career path, định hướng nghề nghiệp</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fa-solid fa-star"></i>
-                            <span class="feature-text">Coaching hoàn chỉnh interview process hoặc dự án trong công ty</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="contact">
+            Contact: <a href="mailto:tuannghia1702@gmail.com">tuannghia1702@gmail.com</a>
         </div>
-    </section>
-
-    <footer>
-        <p>&copy; Gầm bàn dev. All rights reserved.</p>
-    </footer>
+    </div>
 </body>
 </html>
